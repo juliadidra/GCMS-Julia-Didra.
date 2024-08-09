@@ -16,5 +16,10 @@ public class HomeController {
 	return "Hello, Julia Didra!";
 	}
 	
+	@RequestMapping("/clone")
+	public @ResponseBody String greetingclone() {
+	return "Hello, clone!";
+	}
+	
 	
 }
