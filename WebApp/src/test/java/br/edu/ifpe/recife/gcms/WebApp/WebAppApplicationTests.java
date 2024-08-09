@@ -7,7 +7,19 @@ import org.springframework.boot.test.context.SpringBootTest;
 class WebAppApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
+    public void shouldReturnjulia() throws Exception {
+            this.mockMvc.perform(get("/julia"))
+                            .andDo(print()).andExpect(status().isOk())
+                            .andExpect(content()
+                                            .string(containsString("Hello, julia")));
+    }
+	
+	@Test
+    public void shouldReturnHotfix() throws Exception {
+            this.mockMvc.perform(get("/hotfix"))
+                            .andDo(print()).andExpect(status().isOk())
+                            .andExpect(content()
+                                            .string(containsString("Hello, hotfix")));
+    }
 
 }
