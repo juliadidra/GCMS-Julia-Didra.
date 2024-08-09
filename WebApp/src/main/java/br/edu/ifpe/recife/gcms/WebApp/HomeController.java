@@ -26,5 +26,10 @@ public class HomeController {
 	return "Hello, clone!";
 	}
 	
+	@RequestMapping("/hotfix")
+	public @ResponseBody String greetinghotfix() {
+	return "Hello, hotfix!";
+	}
+	
 	
 }
