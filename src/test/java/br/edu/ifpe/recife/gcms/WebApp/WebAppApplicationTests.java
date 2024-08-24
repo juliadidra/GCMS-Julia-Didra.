@@ -5,21 +5,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class WebAppApplicationTests {
-@Test
-    public void shouldReturnjulia() throws Exception {
-        this.mockMvc.perform(get("/"))
-                        .andDo(print()).andExpect(status().isOk())
-                        .andExpect(content()
-                                        .string(containsString("Hello, World")));
-}
-
-@Test
-    public void shouldReturnjulia() throws Exception {
-        this.mockMvc.perform(get("/"))
-                        .andDo(print()).andExpect(status().isOk())
-                        .andExpect(content()
-                                        .string(containsString("Hello, change from 1 copy")));
-}
 	
 @Test
     public void shouldReturnjulia() throws Exception {
