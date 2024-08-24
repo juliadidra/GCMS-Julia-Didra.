@@ -15,11 +15,11 @@ class WebAppApplicationTests {
 }
 
 @Test
-public void shouldReturnhotfix() throws Exception {
+public void shouldReturnclone() throws Exception {
         this.mockMvc.perform(get("/clone"))
                         .andDo(print()).andExpect(status().isOk())
                         .andExpect(content()
-                                        .string(containsString("Hello, hotfix")));
+                                        .string(containsString("Hello, clone!")));
 }
 
 @Test
