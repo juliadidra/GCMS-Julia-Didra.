@@ -5,13 +5,36 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class WebAppApplicationTests {
+@Test
+    public void shouldReturnjulia() throws Exception {
+        this.mockMvc.perform(get("/"))
+                        .andDo(print()).andExpect(status().isOk())
+                        .andExpect(content()
+                                        .string(containsString("Hello, World")));
+}
 
-	@Test
+@Test
+    public void shouldReturnjulia() throws Exception {
+        this.mockMvc.perform(get("/"))
+                        .andDo(print()).andExpect(status().isOk())
+                        .andExpect(content()
+                                        .string(containsString("Hello, change from 1 copy")));
+}
+	
+@Test
     public void shouldReturnjulia() throws Exception {
         this.mockMvc.perform(get("/julia"))
                         .andDo(print()).andExpect(status().isOk())
                         .andExpect(content()
-                                        .string(containsString("Hello, julia")));
+                                        .string(containsString("Hello, Julia Didra!")));
+}
+
+@Test
+public void shouldReturnhotfix() throws Exception {
+        this.mockMvc.perform(get("/clone"))
+                        .andDo(print()).andExpect(status().isOk())
+                        .andExpect(content()
+                                        .string(containsString("Hello, hotfix")));
 }
 
 @Test
@@ -19,7 +42,10 @@ public void shouldReturnhotfix() throws Exception {
         this.mockMvc.perform(get("/hotfix"))
                         .andDo(print()).andExpect(status().isOk())
                         .andExpect(content()
-                                        .string(containsString("Hello, hotfix")));
+                                        .string(containsString("Hello, hotfix!")));
 }
+
+
+
 
 }
