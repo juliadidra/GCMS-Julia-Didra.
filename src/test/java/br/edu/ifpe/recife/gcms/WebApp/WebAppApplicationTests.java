@@ -11,7 +11,7 @@ class WebAppApplicationTests {
         this.mockMvc.perform(get("/julia"))
                         .andDo(print()).andExpect(status().isOk())
                         .andExpect(content()
-                                        .string(containsString("Hello, Julia Didra!")));
+                                        .string(containsString("Hello, Julia Didra!"));
 }
 
 @Test
@@ -19,7 +19,7 @@ public void shouldReturnclone() throws Exception {
         this.mockMvc.perform(get("/clone"))
                         .andDo(print()).andExpect(status().isOk())
                         .andExpect(content()
-                                        .string(containsString("Hello, clone!")));
+                                        .string(containsString("Hello, clone!"));
 }
 
 @Test
@@ -27,7 +27,7 @@ public void shouldReturnhotfix() throws Exception {
         this.mockMvc.perform(get("/hotfix"))
                         .andDo(print()).andExpect(status().isOk())
                         .andExpect(content()
-                                        .string(containsString("Hello, hotfix!")));
+                                        .string(containsString("Hello, hotfix!"));
 }
 
 
