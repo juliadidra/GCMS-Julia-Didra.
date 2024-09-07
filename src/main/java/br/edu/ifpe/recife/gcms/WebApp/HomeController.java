@@ -11,7 +11,7 @@ public class HomeController {
 	//Mais modificações no clone da pratica
 
 	@RequestMapping("/")
-	publi @ResponseBody String greeting() {
+	public @ResponseBody String greeting() {
 		return "Hello, World";
 	}
 	
